@@ -1,0 +1,56 @@
+.header {
+    text-align: center;
+    background: #1abc9c;
+    background-image: linear-gradient(to bottom right, #7ccbd9, #0d434d);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+  }
+
+  .link {
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    position: relative;
+    font-family:'Times New Roman', Times, serif;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  .link:hover {
+    color: #c4ccca;
+
+  }
+  #cs50:hover {
+    color: #7ccbd9;
+    font-size: 105%;
+  }
+  .vertical {
+    border-left: 2px solid grey;
+    height: 25px;
+    position: absolute;
+    top: 25%;
+    color: grey;
+    left: 37%;
+  }
+  #flexSwitchCheckDefault {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 30px;
+  }
+  .myUll {
+    display: inline-block;
+    text-align: left;
+    font-size: 120%;
+  }
+  h4 {
+    text-decoration: underline;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 200%;
+  }
+  #pict {
+    
+  }

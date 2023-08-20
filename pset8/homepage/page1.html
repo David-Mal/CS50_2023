@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <title>
+        Passions
+    </title>
+    <script>
+         document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('#pas').onclick = function homeFunction() {
+                    alert("You're already there.");
+                }
+                document.querySelector('#flexSwitchCheckDefault').addEventListener('click', function() {
+                    if (document.querySelector('#flexSwitchCheckDefault').checked === true) {
+                    document.querySelector('body').style.backgroundColor = '#30302f';
+                    let x = document.querySelectorAll('.all');
+                    for (let i = 0; i < x.length; i++)
+                        x[i].style.color = 'white';
+                    }
+
+                    else {
+                    document.querySelector('body').style.backgroundColor = 'white';
+                    let x = document.querySelectorAll('.all');
+                    for (let i = 0; i < x.length; i++)
+                        x[i].style.color = 'black';
+                    }
+                });
+            });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>
+            Introducing me.
+        </h1>
+        <a id='pas' data-toggle="tooltip" data-placement="bottom" title="Already there." class="link" style="top:-30px; left:-70px;">passions</a>
+        <a href="page2.html" class="link" style="top:-30px; left:-10px;">future</a>
+        <a href="page3.html" class="link" style="top:-30px; left: 60px;">about</a>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" data-toggle="tooltip" data-placement="left" title="Dark/Light Mode"">
+          </div>
+    </div>
+    <form action="index.html">
+        <button class="btn btn-light" style="position: relative; left: 10px; top: -130px;"><i class="bi bi-house"></i></button>
+        </form>
+        <div style="text-align: center" class="all">
+            <h1>My main passions are:</h1>
+            <ul class="myUll">
+                <li>Computer Science</li>
+                <li>Music</li>
+                <li>Football</li>
+                <li>Cycling</li>
+            </ul>
+        </div>
+        <div class="all">
+        <h4>Computer Science:</h4>
+        <p style="font-size: 120%;">This passion started 3 years ago when I got into highschool. I started with competitive programming, trying to solve as many problems as I could.
+            I competed against one of my classmates during one summer, each of us trying to overpass the other in the amount of CP problems solved. After some time
+            I decided to look into other fields of computer science, my main goal being to create my own sites. Apart from that I also began to learn <code>C#</code> and I built simple games
+            like <em>Tic-Tac-Toe</em> or <em>The Hangman</em>. Now I'm looking forward to continuing to learn more about Web Development and building more advanced stuff.
+        </p>
+        <br>
+        <h4>Music:</h4>
+        <p style="font-size: 120%;">
+            My passion for music started 4 years ago when I learned to play the guitar and I fell in love with the instrument.
+            After some time I also decided to buy a trumpet and I'm now learning how to play it, and so far I find it more difficult than the guitar.
+            Apart from playing music I love listening to it, and I'm interested in finding artist and their creations. I love multiple genres of music but
+            the one I listen to the most is hip-hop.
+        </p>
+        <h4>Football:</h4>
+        <p style="font-size: 120%;">
+            I love football since childhood. I didn't always love it, as I was pretty bad at it when I was a kid, and during school
+            PE classes I was usually benched. But I kept playing it and became good enough. I am now playing this sport once or twice a week
+            and every time I get a chance to play a match I am on it.
+        </p>
+        <h4>Cycling:</h4>
+        <p style="font-size: 120%;">
+            This one I don't practice that much, and I think that riding my bicyle became a passion just because I had to get used to it
+            as it's my main method of traveling in town and I go to school by my bike almost everyday. But I barely refuse a chance to ride my
+            bike with some friends, and upon that I really fancy long rides through wich I am able to enjoy the nature.
+        </p>
+        </div>
+</body>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            function clear()
+            {
+                right = document.querySelector('.right');
+                wrong = document.querySelectorAll('.wrong');
+                right.style.backgroundColor = '#d9edff';
+                right.style.color = 'black';
+                for (let i = 0; i < wrong.length; i++)
+                {
+                    wrong[i].style.backgroundColor = '#d9edff';
+                    wrong[i].style.color = 'black';
+                }
+            }
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('.right').addEventListener("click", function() {
+                    clear();
+                    document.querySelector('.right').style.backgroundColor = 'green';
+                    document.querySelector('.right').style.color = 'white';
+                    document.querySelector('#result').innerHTML='Correct!';
+                });
+
+                let incorrect = document.querySelectorAll('.wrong');
+                for (let i = 0; i < incorrect.length; i++)
+                {
+                    incorrect[i].addEventListener("click", function() {
+                        clear();
+                        incorrect[i].style.backgroundColor = 'red';
+                        incorrect[i].style.color = 'white';
+                        document.querySelector('#result').innerHTML='Incorrect!';
+                    });
+                }
+
+                document.querySelector('.check').addEventListener('click', function() {
+
+                    if (document.querySelector('input').value.toLowerCase() === 'ronaldinho')
+                    {
+                        document.querySelector('input').style.backgroundColor = 'green';
+                        document.querySelector('input').style.color = 'white';
+                        document.querySelector('#ans').innerHTML = "Correct!";
+                    }
+                    else
+                    {
+                        document.querySelector('input').style.backgroundColor = 'red';
+                        document.querySelector('input').style.color = 'white';
+                        document.querySelector('#ans').innerHTML = "Incorrect!";
+                    }
+                    });
+                });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- multiple choice question -->
+                <h3>Who is the greatest footballer of all time?</h3>
+                <br>
+                <button class="right">Lionel Messi</button>
+                <button class="wrong">Cristiano Ronaldo</button>
+                <button class="wrong">Diego Maradona</button>
+                <button class="wrong">Pele</button>
+                <br>
+                <p id="result"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- free response question -->
+                <h3>Which football player won the Ballon D'Or in 2005?</h3>
+                <input type="text">
+                <button class="check">Check</button>
+                <p id="ans"></p>
+            </div>
+        </div>
+    </body>
+</html>
